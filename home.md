@@ -21,13 +21,16 @@ Its goal is simple: to verify what still works, document what is broken, and mak
 
 | Item | Status | Notes |
 |------|--------|-------|
-| Mainnet | Checking | Need current block production verification |
-| Wallet | Checking | Need sync and transfer test |
-| Staking / Equity Pool | Checking | Need share purchase and reward verification |
-| Explorer | Mixed / Needs Retest | Public pages resolve, but consistency still needs manual comparison |
-| Public Nodes | Checking | Need reachable node list |
-| Exchange Access | Limited | Verify currently accessible markets |
-| Developer Activity | Low / Unknown | Need recent repository and network verification |
+| Mainnet | Working | Chain height is current; verified during active mining and local sync observation |
+| Explorer | Working | Explorer height matches current chain state in manual testing |
+| Full Node Wallet | Working | New wallet, import, receive, send, history, reopen, and DApp entry all tested successfully |
+| Popup Online Wallet | Working | Online wallet usable in practice |
+| Pullup Wallet (Windows) | Broken | Freezes 100% during wallet/account creation and import |
+| Pullup Wallet (Web) | Broken | Web page opens but freezes and cannot create/import wallet |
+| Staking / Equity Pool | Partial / Working | SEED staking and pool pages work via Popup DApp path; native desktop staking untested |
+| DEX / Swap | Working | Coral DEX / CoralSwap trading flow tested successfully |
+| Local Node on Win11 | Broken | go-sero / gero Windows binaries fail to run in tested environment |
+| Developer Activity | Low / Unknown | Ecosystem still usable, but public development activity remains unclear |
 
 ---
 
@@ -38,23 +41,24 @@ Its goal is simple: to verify what still works, document what is broken, and mak
 - GitHub Organization: https://github.com/sero-cash
 - Core Repository: https://github.com/sero-cash/go-sero
 - Core Releases: https://github.com/sero-cash/go-sero/releases
-- Official Wiki: https://wiki.sero.cash/en/index.html?file=home-Home
+- Official Wiki Home: https://wiki.sero.cash/en/index.html?file=home-Home
 - Wiki Repository: https://github.com/sero-cash/wiki
 
 ### Wallets
 - Full Node Wallet Repository: https://github.com/sero-cash/wallet
 - Full Node Wallet Releases: https://github.com/sero-cash/wallet/releases
-- Light Wallet Repository (Pullup): https://github.com/sero-cash/pullup
-- Light Wallet Releases (Pullup): https://github.com/sero-cash/pullup/releases
+- Pullup Light Wallet Repository: https://github.com/sero-cash/pullup
+- Pullup Releases: https://github.com/sero-cash/pullup/releases
 - Pullup Docs Repository: https://github.com/sero-cash/pullup-docs
-- Mobile Wallet Repository (Popup): https://github.com/sero-cash/popup
+- Popup Mobile Wallet Repository: https://github.com/sero-cash/popup
 
-### Explorer / Tools / Community
+### Explorer / DApps / Community
 - Current Explorer: https://explorer.sero.cash/
 - Historical Explorer: https://explorer.web.sero.cash/blocks.html
-- Historical Smart Contract Editor: https://remix.web.sero.cash/
-- Historical Official X / Twitter: https://twitter.com/SEROdotCASH
+- Popup Online Wallet: https://popup-flame.vercel.app/#/
+- Pullup Web Wallet: https://pullup-ruby.vercel.app/
 - Historical Official Telegram: https://t.me/SeroOfficial
+- Historical Official X / Twitter: https://twitter.com/SEROdotCASH
 - Historical Discord Invite: https://discordapp.com/invite/3AZVMRU
 
 ---
@@ -66,6 +70,7 @@ Its goal is simple: to verify what still works, document what is broken, and mak
 - [Node & RPC Guide](./docs/nodes.md)
 - [Explorer Status](./docs/explorer.md)
 - [Exchange Access Notes](./docs/exchanges.md)
+- [DApp Ecosystem Status](./docs/dapps.md)
 - [Known Issues](./docs/known-issues.md)
 
 ---
@@ -73,19 +78,21 @@ Its goal is simple: to verify what still works, document what is broken, and mak
 ## Latest Updates
 
 - **2026-03-17** — Site created, initial structure published
-- **2026-03-17** — Wallet, staking, node, and explorer verification checklist added
-- **2026-03-17** — Community maintenance policy published
+- **2026-03-18** — Mainnet, explorer, full wallet, Popup, staking DApps, and DEX path confirmed working
+- **2026-03-18** — Pullup and local Win11 node path confirmed broken
 
-See full update history in the [updates](./updates/2026-03-17.md) page.
+See full update history in:
+- [2026-03-17](./updates/2026-03-17.md)
+- [2026-03-18](./updates/2026-03-18.md)
 
 ---
 
 ## Contribute
 
 You can contribute by:
-- testing wallet sync
-- testing node availability
-- confirming staking flow
+- testing native desktop staking
+- testing alternative node environments
+- profiling DEX liquidity depth
 - reporting broken links
 - improving documentation
 - submitting pull requests or issues
