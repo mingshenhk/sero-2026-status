@@ -1,13 +1,16 @@
 # Node and RPC Status
 
-**Status:** Checking  
-**Last Updated:** 2026-03-17
+**Status:** Mixed  
+**Last Updated:** 2026-03-18
 
 ---
 
-## Purpose
+## Summary
 
-This page tracks whether SERO full nodes, RPC endpoints, and public network access points are still usable in 2026.
+- Chain appears live and current
+- Explorer height matches observed chain state
+- Local Windows 11 go-sero / gero binary execution failed in testing
+- Native local node operation on the tested Win11 environment is currently not usable
 
 ---
 
@@ -15,93 +18,75 @@ This page tracks whether SERO full nodes, RPC endpoints, and public network acce
 
 - Core Repository: https://github.com/sero-cash/go-sero
 - Core Releases: https://github.com/sero-cash/go-sero/releases
-- Official Wiki: https://wiki.sero.cash/en/index.html?file=home-Home
-- Source Install Guide (historical): https://wiki.sero.cash/en/index.html?file=Start/from-the-sourcecode-base-on-centos7
-- Binary Install Guide (historical): https://wiki.sero.cash/en/index.html?file=Start/from-the-binary-package
-- Pullup Docs Repository: https://github.com/sero-cash/pullup-docs
+- Official Website: https://sero.cash/
+- Wiki Home: https://wiki.sero.cash/en/index.html?file=home-Home
+- Wiki Repository: https://github.com/sero-cash/wiki
 
 ---
 
-## Key Questions
+## Confirmed Findings
 
-- Is the mainnet still producing blocks?
-- Can a fresh full node still sync?
-- Are there public nodes that are reachable?
-- Does RPC still respond correctly?
-- Are historical node setup instructions still valid?
+- chain height appears current
+- local sync target block count looked correct during test
+- maintainer is actively mining on current chain
+- go-sero release download can be obtained
+- go-sero / gero Windows binaries could not run successfully on tested Windows 11 setup
+- gero.exe error involved missing DLL dependency
+- older versions were also tested and still failed on the same environment
 
 ---
 
-## Verification Checklist
+## Current Status Table
 
 | Item | Result | Notes |
 |------|--------|-------|
-| Full node binary available | Unknown | |
-| Full node starts | Unknown | |
-| Node sync begins | Unknown | |
-| Node reaches current height | Unknown | |
-| Peer discovery works | Unknown | |
-| RPC endpoint responds | Unknown | |
-| Historical config still valid | Unknown | |
+| Chain live status | Working | verified indirectly through mining and explorer comparison |
+| Current chain height | Working | observed as current during mining and local sync target display |
+| Local Win11 binary execution | Broken | go-sero / gero not usable in tested environment |
+| DLL dependency issue | Broken | missing DLL error on Windows 11 |
+| Older Windows binaries | Broken | same failure class in maintainer testing |
+| RPC self-host testing | Untested | blocked by local node failure |
+| Peer discovery | Untested | blocked by local node failure |
+| Alternative OS testing | Untested | |
 
 ---
 
-## Historical Public Node References
+## Known Windows 11 Failure
 
-These are historical references only and **must be re-tested** before being treated as usable.
+Observed issue:
 
-| Endpoint | Type | Status | Last Checked | Notes |
-|----------|------|--------|--------------|-------|
-| http://129.204.197.105:8545 | RPC | Unknown | 2026-03-17 | Historical default node mentioned in Pullup docs |
-| [Add your own tested node here] | RPC / Full Node | Unknown | [Date] | |
+- `gero.exe` fails on Windows 11
+- missing DLL dependency error appears
+- maintainer tested older versions and still could not get local node path working
 
----
-
-## Suggested Test Commands
-
-Document commands here after confirming current software behavior.
-
-### Example Template
-
-```bash
-# start node
-[add verified startup command here]
-
-# query block height
-[add verified RPC or CLI command here]
-
-# query peers
-[add verified peer query command here]
-```
-
-Do not leave example commands in production status pages unless they have been tested.
+This should currently be treated as a confirmed Windows 11 blocker in the tested environment.
 
 ---
 
-## Reporting Template
+## What This Means
 
-When reporting a node test, include:
+SERO chain activity is not the problem.
 
-- Date
-- OS
-- Node version
-- Config file used
-- Sync result
-- Current height reached
-- Peer count
-- RPC status
-- Errors encountered
+The problem is specifically:
+
+**local Windows 11 node usability in the tested environment.**
+
+That distinction matters.
 
 ---
 
-## Known Problems
+## Remaining High-Priority Node Tests
 
-Use this section for recurring failures such as:
+- alternative Windows packaging path
+- alternative OS test
+- self-hosted RPC after a successful node launch
+- wallet connection to custom local node
 
-- no peers found
-- RPC port unreachable
-- startup crash
-- database incompatibility
-- outdated configuration syntax
+---
 
-_No known problems documented yet._
+## Community Test Reports
+
+### 2026-03-18
+- chain live status: working
+- explorer height vs chain: matched in manual testing
+- local Win11 binary execution: broken
