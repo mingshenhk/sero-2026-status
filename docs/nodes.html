@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node and RPC Status - SERO 2026</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">SERO <span>2026</span> Unofficial Status</div>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="./wallets.html">Wallets</a>
+        <a href="./explorer.html">Explorer</a>
+        <a href="./known-issues.html">Issues</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <div class="page-card">
+          <div class="eyebrow">Documentation • Nodes</div>
+          <h1>Node and RPC Status</h1>
+          <div class="page-meta">
+            <span class="pill partial">Mixed</span>
+            <span class="pill unknown">Last Updated: 2026-03-18</span>
+          </div>
+          <p>
+            The chain is live and current, but
+            <strong>local Windows 11 go-sero / gero node execution is broken in the tested environment.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h3>Confirmed findings</h3>
+          <ul class="clean">
+            <li>Chain height appears current</li>
+            <li>Explorer height matches current chain state</li>
+            <li>Maintainer is actively mining on the current chain</li>
+            <li>Local sync target block count looked correct during testing</li>
+            <li>go-sero release downloads can be obtained</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Confirmed failures</h3>
+          <ul class="clean">
+            <li>go-sero / gero binaries do not run successfully on the tested Windows 11 machine</li>
+            <li><code class="inline">gero.exe</code> shows missing DLL error</li>
+            <li>Older versions were also tested and still failed on the same environment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="table-card">
+          <h2>Current status table</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Result</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chain live status</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Verified indirectly through mining and explorer comparison.</td>
+                </tr>
+                <tr>
+                  <td>Current chain height</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Observed as current during mining and sync target display.</td>
+                </tr>
+                <tr>
+                  <td>Local Win11 binary execution</td>
+                  <td><span class="pill broken">Broken</span></td>
+                  <td>go-sero / gero not usable in tested environment.</td>
+                </tr>
+                <tr>
+                  <td>DLL dependency issue</td>
+                  <td><span class="pill broken">Broken</span></td>
+                  <td>Missing DLL error observed on Windows 11.</td>
+                </tr>
+                <tr>
+                  <td>Older Windows binaries</td>
+                  <td><span class="pill broken">Broken</span></td>
+                  <td>Same failure class in maintainer testing.</td>
+                </tr>
+                <tr>
+                  <td>RPC self-host testing</td>
+                  <td><span class="pill unknown">Untested</span></td>
+                  <td>Blocked by local node failure.</td>
+                </tr>
+                <tr>
+                  <td>Peer discovery</td>
+                  <td><span class="pill unknown">Untested</span></td>
+                  <td>Blocked by local node failure.</td>
+                </tr>
+                <tr>
+                  <td>Alternative OS testing</td>
+                  <td><span class="pill unknown">Untested</span></td>
+                  <td>No conclusion yet.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card link-list">
+          <h3>Relevant links</h3>
+          <a href="https://github.com/sero-cash/go-sero" target="_blank" rel="noopener noreferrer">go-sero Repository</a>
+          <a href="https://github.com/sero-cash/go-sero/releases" target="_blank" rel="noopener noreferrer">go-sero Releases</a>
+          <a href="https://sero.cash/" target="_blank" rel="noopener noreferrer">Official Website</a>
+          <a href="https://github.com/sero-cash/wiki" target="_blank" rel="noopener noreferrer">Wiki Repository</a>
+        </div>
+        <div class="card">
+          <h3>Interpretation</h3>
+          <div class="callout">
+            SERO chain activity is not the problem.
+            The problem is specifically the
+            <strong>local Windows 11 node usability path</strong>
+            in the tested environment.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        Distinguish carefully between “chain is alive” and “local node binaries work on this machine”.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
