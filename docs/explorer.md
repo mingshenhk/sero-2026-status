@@ -1,7 +1,6 @@
-```md
 # Explorer Status
 
-**Status:** Checking  
+**Status:** Mixed / Needs Retest  
 **Last Updated:** 2026-03-17
 
 ---
@@ -9,6 +8,28 @@
 ## Purpose
 
 This page tracks whether public SERO block explorers are still reachable, indexing correctly, and showing recent chain data.
+
+---
+
+## Explorer Candidates
+
+| Explorer | Status | Last Checked | Notes |
+|----------|--------|--------------|-------|
+| https://explorer.sero.cash/ | Mixed / Needs Retest | 2026-03-17 | Public pages resolve, but freshness and consistency still need local comparison |
+| https://explorer.web.sero.cash/blocks.html | Historical | 2026-03-17 | Historical official explorer URL from older official docs |
+
+---
+
+## Current Working Assumption
+
+At least one public explorer domain still resolves.  
+However, explorer usability should not be treated as confirmed until you manually compare it against a live node / RPC result.
+
+Use this rule:
+
+- **reachable** does not mean **current**
+- **current** does not mean **correct**
+- **correct** does not mean **complete**
 
 ---
 
@@ -26,23 +47,12 @@ This page tracks whether public SERO block explorers are still reachable, indexi
 
 | Item | Result | Notes |
 |------|--------|-------|
-| Explorer website reachable | Unknown | |
+| Explorer website reachable | Partial | |
 | Recent block list visible | Unknown | |
-| Transaction page loads | Unknown | |
-| Address page loads | Unknown | |
+| Transaction page loads | Partial | |
+| Address page loads | Partial | |
 | Search works | Unknown | |
 | Explorer appears current | Unknown | |
-
----
-
-## Explorer Candidates
-
-Add known explorer URLs here after verification.
-
-| Explorer | Status | Last Checked | Notes |
-|----------|--------|--------------|-------|
-| [Add explorer URL] | Unknown | [Date] | |
-| [Add explorer URL] | Unknown | [Date] | |
 
 ---
 
@@ -60,6 +70,18 @@ Suggested checks:
 6. Test search with a known hash
 
 If the explorer loads but the latest block is old, mark it as **stale**, not **working**.
+
+---
+
+## Recommended Manual Test Targets
+
+- Homepage block counter
+- Blocks list page
+- Transaction list page
+- Account detail page
+- Transaction detail page
+- Search bar behavior
+- Block height freshness vs local node
 
 ---
 
