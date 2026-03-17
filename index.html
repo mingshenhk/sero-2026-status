@@ -198,6 +198,530 @@
       white-space: nowrap;
     }
 
+    .working  { background: rgba(24, 195, 126, 0.16); color: #7ef0b8; }
+    .partial  { background: rgba(240, 180, 41, 0.16); color: #ffd56e; }
+    .broken   { background: rgba(239, 83, 80, 0.16); color: #ff9f9d; }
+    .unknown  { background: rgba(255,255,255,0.08); color: #d9e1ff; }
+
+    .section {
+      padding: 10px 0 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .link-card, .doc-card, .update-card {
+      padding: 20px;
+    }
+
+    .link-card h3, .doc-card h3, .update-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .notice {
+      padding: 20px;
+      margin: 22px 0 10px;
+      border-left: 4px solid var(--warn);
+    }
+
+    ul.clean {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+
+    footer {
+      padding: 36px 0 64px;
+      color: var(--muted);
+    }
+
+    .footer-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+
+    code.inline {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-size: 0.92em;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">SERO <span>2026</span> Unofficial Status</div>
+      <nav class="nav-links">
+        <a href="#status">Status</a>
+        <a href="#links">Links</a>
+        <a href="#docs">Docs</a>
+        <a href="#updates">Updates</a>
+        <a href="https://github.com/mingshenhk/sero-2026-status/issues" target="_blank" rel="noopener noreferrer">Issues</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Community-maintained • Not official • 2026 tracking</div>
+          <h1>SERO 2026 Unofficial Status Page</h1>
+          <p>
+            This page exists to answer one question honestly:
+            <strong>Is SERO still usable in 2026?</strong>
+          </p>
+          <p>
+            Based on current manual testing, the answer is:
+            <strong>yes, but unevenly.</strong>
+            The chain, explorer, full wallet, Popup wallet, staking DApps, and DEX path are operational.
+            Pullup is broken, and local Windows 11 node binaries are not currently usable in the tested environment.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="https://github.com/mingshenhk/sero-2026-status" target="_blank" rel="noopener noreferrer">Open Repository</a>
+            <a class="btn secondary" href="https://github.com/mingshenhk/sero-2026-status/issues" target="_blank" rel="noopener noreferrer">Report an Issue</a>
+            <a class="btn secondary" href="./docs/wallets.md">Check Wallet Docs</a>
+          </div>
+        </div>
+
+        <div class="side-stack">
+          <div class="panel">
+            <h3>Current Snapshot</h3>
+            <p class="small">Last editorial refresh: 2026-03-18</p>
+            <div class="badges">
+              <div class="badge-row"><span>Mainnet</span><span class="pill working">Working</span></div>
+              <div class="badge-row"><span>Explorer</span><span class="pill working">Working</span></div>
+              <div class="badge-row"><span>Full Node Wallet</span><span class="pill working">Working</span></div>
+              <div class="badge-row"><span>Popup Online Wallet</span><span class="pill working">Working</span></div>
+              <div class="badge-row"><span>Pullup Wallet</span><span class="pill broken">Broken</span></div>
+              <div class="badge-row"><span>Staking / Equity Pool</span><span class="pill partial">Partial / Working</span></div>
+              <div class="badge-row"><span>DEX / Swap</span><span class="pill working">Working</span></div>
+              <div class="badge-row"><span>Local Node on Win11</span><span class="pill broken">Broken</span></div>
+              <div class="badge-row"><span>Developer Activity</span><span class="pill unknown">Low / Unknown</span></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>What this site will not do</h3>
+            <ul class="clean">
+              <li>Pretend to be official</li>
+              <li>Promise profits or recovery</li>
+              <li>Publish fake partnerships</li>
+              <li>Hide failed tests</li>
+              <li>Encourage coordinated pumping</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="notice">
+          <strong>Important:</strong> SERO is not “fully dead”, but it is also not “fully healthy”.
+          The strongest live path currently appears to be:
+          <strong>full node wallet + Popup online wallet + DApp browser</strong>.
+          The weakest confirmed parts are:
+          <strong>Pullup</strong> and <strong>local Windows 11 node binaries</strong>.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="status">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Status Focus</h2>
+            <div class="muted">These are the areas that matter most right now.</div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="doc-card">
+            <h3>1. Chain and Explorer Are Alive</h3>
+            <p class="muted">
+              Mainnet height is current, explorer is usable, and the maintainer is actively mining and matching observed chain state.
+            </p>
+          </div>
+          <div class="doc-card">
+            <h3>2. Wallet Reality Is Split</h3>
+            <p class="muted">
+              Full Node Wallet works. Popup works. Pullup is broken on both Windows and web for wallet creation/import.
+            </p>
+          </div>
+          <div class="doc-card">
+            <h3>3. DApp Path Still Matters</h3>
+            <p class="muted">
+              SEED, pool, Coral DEX, and CoralSwap remain usable through the Popup DApp path.
+            </p>
+          </div>
+          <div class="doc-card">
+            <h3>4. Win11 Local Node Is a Known Failure</h3>
+            <p class="muted">
+              go-sero / gero Windows binaries fail to run in the tested Windows 11 environment, including older versions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Official / Historical SERO Links</h2>
+            <div class="muted">Collected and re-labeled based on current manual verification.</div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="link-card">
+            <h3>Core</h3>
+            <p><a href="https://sero.cash/" target="_blank" rel="noopener noreferrer">Official Website</a></p>
+            <p><a href="https://github.com/sero-cash" target="_blank" rel="noopener noreferrer">GitHub Organization</a></p>
+            <p><a href="https://github.com/sero-cash/go-sero" target="_blank" rel="noopener noreferrer">go-sero Core Repository</a></p>
+            <p><a href="https://github.com/sero-cash/go-sero/releases" target="_blank" rel="noopener noreferrer">go-sero Releases</a></p>
+            <p><a href="https://wiki.sero.cash/en/index.html?file=home-Home" target="_blank" rel="noopener noreferrer">Official Wiki Home (currently broken)</a></p>
+            <p><a href="https://github.com/sero-cash/wiki" target="_blank" rel="noopener noreferrer">Wiki Repository</a></p>
+          </div>
+
+          <div class="link-card">
+            <h3>Wallets</h3>
+            <p><a href="https://github.com/sero-cash/wallet" target="_blank" rel="noopener noreferrer">Full Node Wallet Repository</a></p>
+            <p><a href="https://github.com/sero-cash/wallet/releases" target="_blank" rel="noopener noreferrer">Full Node Wallet Releases</a></p>
+            <p><a href="https://github.com/sero-cash/pullup" target="_blank" rel="noopener noreferrer">Pullup Light Wallet Repository</a></p>
+            <p><a href="https://github.com/sero-cash/pullup/releases" target="_blank" rel="noopener noreferrer">Pullup Releases</a></p>
+            <p><a href="https://github.com/sero-cash/pullup-docs" target="_blank" rel="noopener noreferrer">Pullup Docs Repository</a></p>
+            <p><a href="https://github.com/sero-cash/popup" target="_blank" rel="noopener noreferrer">Popup Mobile Wallet Repository</a></p>
+          </div>
+
+          <div class="link-card">
+            <h3>Explorer / DApps / Community</h3>
+            <p><a href="https://explorer.sero.cash/" target="_blank" rel="noopener noreferrer">Current Explorer</a></p>
+            <p><a href="https://explorer.web.sero.cash/blocks.html" target="_blank" rel="noopener noreferrer">Historical Explorer (currently broken)</a></p>
+            <p><a href="https://popup-flame.vercel.app/#/" target="_blank" rel="noopener noreferrer">Popup Online Wallet</a></p>
+            <p><a href="https://pullup-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">Pullup Web Wallet</a></p>
+            <p><a href="https://t.me/SeroOfficial" target="_blank" rel="noopener noreferrer">Historical Official Telegram</a></p>
+            <p><a href="https://twitter.com/SEROdotCASH" target="_blank" rel="noopener noreferrer">Historical Official X / Twitter</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="docs">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Documentation</h2>
+            <div class="muted">These pages reflect current manual testing, not recycled old claims.</div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="doc-card">
+            <h3><a href="./docs/wallets.md">Wallet Setup Guide</a></h3>
+            <p class="muted">Full Node Wallet works, Popup works, Pullup is broken.</p>
+          </div>
+          <div class="doc-card">
+            <h3><a href="./docs/staking.md">Staking Guide</a></h3>
+            <p class="muted">SEED and pool path work through Popup, native desktop staking remains untested.</p>
+          </div>
+          <div class="doc-card">
+            <h3><a href="./docs/nodes.md">Node & RPC Guide</a></h3>
+            <p class="muted">Chain appears live, but local Windows 11 node execution is broken in tested environment.</p>
+          </div>
+          <div class="doc-card">
+            <h3><a href="./docs/explorer.md">Explorer Status</a></h3>
+            <p class="muted">Explorer is usable and matches current chain height in manual testing.</p>
+          </div>
+          <div class="doc-card">
+            <h3><a href="./docs/exchanges.md">Exchange Access Notes</a></h3>
+            <p class="muted">Coral DEX and CoralSwap trading path tested successfully.</p>
+          </div>
+          <div class="doc-card">
+            <h3><a href="./docs/dapps.md">DApp Ecosystem Status</a></h3>
+            <p class="muted">Popup DApp browser is currently the strongest practical route into the remaining ecosystem.</p>
+          </div>
+          <div class="doc-card">
+            <h3><a href="./docs/known-issues.md">Known Issues</a></h3>
+            <p class="muted">Pullup and local Win11 node execution are the most important confirmed breakpoints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="updates">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Latest Updates</h2>
+            <div class="muted">Keep updates short, dated, and evidence-based.</div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="update-card">
+            <h3>2026-03-17 — Initial publication</h3>
+            <p class="muted">
+              Repository structure created and first status pages published.
+            </p>
+            <p><a href="./updates/2026-03-17.md">Read update log</a></p>
+          </div>
+
+          <div class="update-card">
+            <h3>2026-03-18 — Major status correction</h3>
+            <p class="muted">
+              Mainnet, explorer, full wallet, Popup, staking DApps, and DEX path confirmed working.
+              Pullup and local Win11 node execution confirmed broken.
+            </p>
+            <p><a href="./updates/2026-03-18.md">Read update log</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-card">
+        <strong>Maintenance rule:</strong> if something is not tested, mark it as <code class="inline">Unknown</code> or <code class="inline">Untested</code>.
+        If something is broken, say it plainly.
+      </div>
+    </div>
+  </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SERO 2026 Unofficial Status Page</title>
+  <meta name="description" content="Community-maintained SERO ecosystem status, tools, docs, and live checks for 2026." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #121933;
+      --card: #151d3b;
+      --card-2: #1b2550;
+      --text: #eef2ff;
+      --muted: #a9b3d1;
+      --line: #2a366a;
+      --ok: #18c37e;
+      --warn: #f0b429;
+      --bad: #ef5350;
+      --link: #7aa2ff;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(67, 97, 238, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(0, 200, 255, 0.10), transparent 25%),
+        linear-gradient(180deg, #09101f 0%, #0b1020 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(12px);
+      background: rgba(9, 16, 31, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: #8fb3ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card, .panel, .link-card, .doc-card, .notice, .update-card {
+      background: linear-gradient(180deg, rgba(23,29,59,0.95), rgba(18,25,51,0.92));
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 32px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(122, 162, 255, 0.12);
+      border: 1px solid rgba(122, 162, 255, 0.24);
+      color: #c7d8ff;
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #23346f;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn.secondary {
+      background: transparent;
+    }
+
+    .side-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel {
+      padding: 20px;
+    }
+
+    .panel h3, .section h2 {
+      margin-top: 0;
+    }
+
+    .small {
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .badges {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
     .checking { background: rgba(240, 180, 41, 0.16); color: #ffd56e; }
     .limited  { background: rgba(239, 83, 80, 0.16); color: #ff9f9d; }
     .unknown  { background: rgba(255,255,255,0.08); color: #d9e1ff; }
