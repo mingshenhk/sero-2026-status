@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wallet Setup and Wallet Status - SERO 2026</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">SERO <span>2026</span> Unofficial Status</div>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="./staking.html">Staking</a>
+        <a href="./nodes.html">Nodes</a>
+        <a href="./explorer.html">Explorer</a>
+        <a href="./known-issues.html">Issues</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <div class="page-card">
+          <div class="eyebrow">Documentation • Wallets</div>
+          <h1>Wallet Setup and Wallet Status</h1>
+          <div class="page-meta">
+            <span class="pill partial">Mixed</span>
+            <span class="pill unknown">Last Updated: 2026-03-18</span>
+          </div>
+          <p>
+            As of current Windows 11 testing:
+            <strong>Full Node Wallet works, Popup works, Pullup Windows is broken, and Pullup web is broken.</strong>
+          </p>
+          <div class="button-row">
+            <a class="btn" href="../index.html">Back Home</a>
+            <a class="btn secondary" href="https://popup-flame.vercel.app/#/" target="_blank" rel="noopener noreferrer">Open Popup</a>
+            <a class="btn secondary" href="https://pullup-ruby.vercel.app/" target="_blank" rel="noopener noreferrer">Open Pullup Web</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h3>Confirmed working</h3>
+          <ul class="clean">
+            <li>Full Node Wallet download</li>
+            <li>Full Node Wallet install</li>
+            <li>New wallet creation</li>
+            <li>Wallet import</li>
+            <li>Receive funds</li>
+            <li>Send funds</li>
+            <li>Transaction history</li>
+            <li>Reopen after disconnect</li>
+            <li>Contract / DApp entry</li>
+            <li>Popup online wallet access</li>
+            <li>Popup DApp browser access</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Confirmed broken</h3>
+          <ul class="clean">
+            <li>Pullup Windows wallet freezes during wallet/account creation</li>
+            <li>Pullup Windows wallet freezes during wallet import</li>
+            <li>Pullup web wallet freezes during wallet creation</li>
+            <li>Pullup web wallet freezes during wallet import</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="table-card">
+          <h2>Verification table</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Result</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Full Node Wallet download</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Repository and downloads are reachable.</td>
+                </tr>
+                <tr>
+                  <td>Full Node Wallet install</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Tested successfully on Windows 11.</td>
+                </tr>
+                <tr>
+                  <td>New wallet creation</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Confirmed.</td>
+                </tr>
+                <tr>
+                  <td>Existing wallet import</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Confirmed.</td>
+                </tr>
+                <tr>
+                  <td>Receive funds</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Confirmed.</td>
+                </tr>
+                <tr>
+                  <td>Send funds</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Confirmed.</td>
+                </tr>
+                <tr>
+                  <td>Transaction history</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Confirmed.</td>
+                </tr>
+                <tr>
+                  <td>Reopen after disconnect</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Wallet state remains normal.</td>
+                </tr>
+                <tr>
+                  <td>Contract / DApp entry</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Confirmed from Full Node Wallet.</td>
+                </tr>
+                <tr>
+                  <td>Popup online wallet</td>
+                  <td><span class="pill working">Working</span></td>
+                  <td>Practical live route into the ecosystem.</td>
+                </tr>
+                <tr>
+                  <td>Pullup Windows creation/import</td>
+                  <td><span class="pill broken">Broken</span></td>
+                  <td>Freezes 100%.</td>
+                </tr>
+                <tr>
+                  <td>Pullup web creation/import</td>
+                  <td><span class="pill broken">Broken</span></td>
+                  <td>Freezes 100%.</td>
+                </tr>
+                <tr>
+                  <td>Native desktop staking page</td>
+                  <td><span class="pill unknown">Untested</span></td>
+                  <td>Not yet verified.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card link-list">
+          <h3>Official / historical wallet links</h3>
+          <a href="https://github.com/sero-cash/wallet" target="_blank" rel="noopener noreferrer">Full Node Wallet Repository</a>
+          <a href="https://github.com/sero-cash/wallet/releases" target="_blank" rel="noopener noreferrer">Full Node Wallet Releases</a>
+          <a href="https://github.com/sero-cash/pullup" target="_blank" rel="noopener noreferrer">Pullup Repository</a>
+          <a href="https://github.com/sero-cash/pullup/releases" target="_blank" rel="noopener noreferrer">Pullup Releases</a>
+          <a href="https://github.com/sero-cash/pullup-docs" target="_blank" rel="noopener noreferrer">Pullup Docs Repository</a>
+          <a href="https://github.com/sero-cash/popup" target="_blank" rel="noopener noreferrer">Popup Repository</a>
+        </div>
+        <div class="card">
+          <h3>Current practical recommendation</h3>
+          <div class="callout">
+            For normal use in the current tested state, the safest practical wallet routes are:
+            <ol class="clean">
+              <li>Full Node Wallet</li>
+              <li>Popup online wallet</li>
+            </ol>
+            Pullup should currently be treated as unusable for onboarding.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        Wallet status is based on current manual testing, not on old guides or assumptions.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
