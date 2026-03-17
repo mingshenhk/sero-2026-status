@@ -11,6 +11,27 @@ This page tracks whether SERO wallets are still usable in 2026 and provides a cl
 
 ---
 
+## Official / Historical Wallet Links
+
+### Full Node Wallet
+- Repository: https://github.com/sero-cash/wallet
+- Releases: https://github.com/sero-cash/wallet/releases
+
+### Light Wallet (Pullup)
+- Repository: https://github.com/sero-cash/pullup
+- Releases: https://github.com/sero-cash/pullup/releases
+- Docs Repository: https://github.com/sero-cash/pullup-docs
+
+### Mobile Wallet
+- Repository: https://github.com/sero-cash/popup
+
+### General SERO Docs
+- Official Website: https://sero.cash/
+- Official Wiki: https://wiki.sero.cash/en/index.html?file=home-Home
+- Wallet Manual (historical): https://wiki.sero.cash/en/index.html?file=Tutorial/manual-of-wallet
+
+---
+
 ## What Needs To Be Verified
 
 - Can the wallet still be downloaded from a reliable source?
@@ -28,6 +49,8 @@ This page tracks whether SERO wallets are still usable in 2026 and provides a cl
 | Item | Result | Notes |
 |------|--------|-------|
 | Official wallet source reachable | Unknown | |
+| Full node wallet download works | Unknown | |
+| Pullup wallet download works | Unknown | |
 | Desktop wallet installs | Unknown | |
 | Wallet starts normally | Unknown | |
 | New wallet creation works | Unknown | |
@@ -37,20 +60,6 @@ This page tracks whether SERO wallets are still usable in 2026 and provides a cl
 | Outbound transfer works | Unknown | |
 | Transaction history loads | Unknown | |
 | Staking page accessible | Unknown | |
-
----
-
-## Download Sources
-
-Add known sources here after verification.
-
-### Historical / Official Sources
-- Official Website: [Add link]
-- GitHub Organization: [Add link]
-- Wallet Repository: [Add link]
-
-### Community Mirrors
-- [Add mirror link only after verifying checksum / authenticity]
 
 ---
 
@@ -85,6 +94,7 @@ When testing a wallet, record:
 - Historical download links may be broken
 - Some wallet instructions from old guides may no longer match current systems
 - Network sync may fail if public nodes are unavailable
+- Full node wallet and Pullup wallet may not be interchangeable in account-file format
 
 ---
 
