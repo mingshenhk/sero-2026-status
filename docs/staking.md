@@ -1,77 +1,91 @@
 # SERO Staking / Equity Pool Status
 
-**Status:** Checking  
-**Last Updated:** 2026-03-17
+**Status:** Partial / Working  
+**Last Updated:** 2026-03-18
 
 ---
 
-## Purpose
+## Summary
 
-This page tracks whether SERO staking / equity pool functionality is still usable in 2026.
+Native desktop-wallet staking has not yet been tested.
 
----
+However, staking-related functionality is confirmed to work through the Popup online wallet DApp path.
 
-## What Needs To Be Verified
+Confirmed working path:
 
-- Can a wallet access the staking interface?
-- Can a user still buy shares / tickets successfully?
-- Are rewards still being distributed?
-- Are public pools still visible?
-- Are there minimum amount or gas constraints?
-- Is the old documentation still accurate?
+- Popup online wallet
+- SEED DApp
+- pool.sero.cash
 
 ---
 
-## Verification Checklist
+## Confirmed Working
+
+### SEED DApp
+Confirmed usable through Popup DApp browser:
+
+- DApp loads
+- staking-related interface available
+- staking path usable in practice
+
+### Pool
+- URL: https://pool.sero.cash/#/
+- page reachable
+- pool usage path available
+
+---
+
+## Current Interpretation
+
+SERO staking is **not dead**.
+
+The current confirmed live staking path is:
+
+**Popup online wallet -> DApp browser -> SEED / pool**
+
+---
+
+## Not Yet Tested
+
+The following remain unverified:
+
+- native staking page inside Full Node Wallet
+- native desktop purchase flow
+- native desktop redeem / unstake flow
+- native desktop reward display
+- full staking behavior outside Popup path
+
+---
+
+## Verification Table
 
 | Item | Result | Notes |
 |------|--------|-------|
-| Wallet opens staking page | Unknown | |
-| Pool list loads | Unknown | |
-| Share purchase possible | Unknown | |
-| Confirmation visible | Unknown | |
-| Reward tracking works | Unknown | |
-| Exit / unstake flow works | Unknown | |
+| Popup DApp staking path | Working | |
+| SEED DApp reachable | Working | |
+| Pool page reachable | Working | |
+| Practical staking path via Popup | Working | |
+| Native Full Node Wallet staking page | Untested | |
+| Native desktop ticket/share purchase flow | Untested | |
+| Native desktop unstake/redeem flow | Untested | |
 
 ---
 
-## Historical Notes
+## Risk Note
 
-Based on old public documentation, SERO used a staking / equity-pool style system rather than the simplest “one-click delegated staking” model.  
-This section must not be treated as current truth until verified in 2026.
+This page documents functionality, not investment merit.
 
-Items that still need live confirmation:
-
-- Whether pools are still operating
-- Whether share purchase flows still succeed
-- Whether rewards continue to accrue
-- Whether unstake or exit functions behave as described in historical documentation
-
----
-
-## Testing Procedure
-
-A complete staking verification should record:
-
-1. Wallet version used
-2. Whether the staking page opens
-3. Number of visible pools
-4. Whether purchase flow completes
-5. Number of confirmations required
-6. Whether rewards appear after waiting
-7. Whether any error messages occur
-
----
-
-## Risk Warning
-
-This page does **not** promise returns and does **not** recommend staking for profit.  
-It only documents whether the functionality still works.
-
-For a small, illiquid project, technical success does **not** imply investment safety.
+A working staking path does **not** imply:
+- healthy economics
+- strong liquidity
+- low risk
+- good long-term sustainability
 
 ---
 
 ## Community Test Reports
 
-_No reports yet._
+### 2026-03-18
+- SEED staking path via Popup: working
+- pool.sero.cash: reachable and usable
+- native desktop staking: untested
