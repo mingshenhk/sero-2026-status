@@ -19,7 +19,7 @@ Its purpose is to provide a factual, test-based view of the ecosystem.
 
 ## Why This Exists
 
-SERO still has historical infrastructure, repositories, and documentation, but much of the public information appears outdated or fragmented.
+SERO still has historical infrastructure, repositories, wallets, and DApps, but much of the public information appears outdated, fragmented, or partially broken.
 
 This project exists to:
 
@@ -31,17 +31,19 @@ This project exists to:
 
 ---
 
-## Scope
+## Current High-Level Status
 
-This repository covers:
+As of current manual testing:
 
-- wallet usability
-- node / RPC availability
-- explorer status
-- staking / equity pool flow
-- exchange accessibility
-- known issues
-- community updates
+- Mainnet: working
+- Explorer: working
+- Full Node Wallet: working
+- Popup online wallet: working
+- Pullup Windows wallet: broken
+- Pullup web wallet: broken
+- Staking / equity pool: partial / working via Popup DApp path
+- DEX / swap: working
+- Local Windows 11 node execution: broken
 
 ---
 
@@ -52,25 +54,27 @@ This repository covers:
 - GitHub Organization: https://github.com/sero-cash
 - Core Repository: https://github.com/sero-cash/go-sero
 - Core Releases: https://github.com/sero-cash/go-sero/releases
-- Official Wiki: https://wiki.sero.cash/en/index.html?file=home-Home
+- Official Wiki Home: https://wiki.sero.cash/en/index.html?file=home-Home
 - Wiki Repository: https://github.com/sero-cash/wiki
 
 ### Wallets
 - Full Node Wallet Repository: https://github.com/sero-cash/wallet
 - Full Node Wallet Releases: https://github.com/sero-cash/wallet/releases
-- Light Wallet Repository (Pullup): https://github.com/sero-cash/pullup
-- Light Wallet Releases (Pullup): https://github.com/sero-cash/pullup/releases
+- Pullup Light Wallet Repository: https://github.com/sero-cash/pullup
+- Pullup Releases: https://github.com/sero-cash/pullup/releases
 - Pullup Docs Repository: https://github.com/sero-cash/pullup-docs
-- Mobile Wallet Repository (Popup): https://github.com/sero-cash/popup
+- Popup Mobile Wallet Repository: https://github.com/sero-cash/popup
 
-### Network / Explorer / Tools
+### Explorer / DApps / Community
 - Current Explorer: https://explorer.sero.cash/
-- Historical Explorer (from older docs): https://explorer.web.sero.cash/blocks.html
-- Historical Smart Contract Editor: https://remix.web.sero.cash/
-
-### Historical Official Community Links
-- Official X / Twitter: https://twitter.com/SEROdotCASH
-- Official Telegram: https://t.me/SeroOfficial
+- Historical Explorer: https://explorer.web.sero.cash/blocks.html
+- Popup Online Wallet: https://popup-flame.vercel.app/#/
+- Pullup Web Wallet: https://pullup-ruby.vercel.app/
+- SEED DApp: https://popup-flame.vercel.app/#/browser/https%3A%2F%2Fseed.sero.cash%3F1773715046674
+- Pool DApp: https://pool.sero.cash/#/
+- Coral Swap: https://popup-flame.vercel.app/#/browser/https%3A%2F%2Fcorswap.sero.cash%3F1773715383684
+- Historical Official Telegram: https://t.me/SeroOfficial
+- Historical Official X / Twitter: https://twitter.com/SEROdotCASH
 - Historical Discord Invite: https://discordapp.com/invite/3AZVMRU
 
 ---
@@ -88,20 +92,22 @@ This repository covers:
 │  ├─ nodes.md
 │  ├─ explorer.md
 │  ├─ exchanges.md
+│  ├─ dapps.md
 │  └─ known-issues.md
 └─ updates/
-   └─ 2026-03-17.md
+   ├─ 2026-03-17.md
+   └─ 2026-03-18.md
 
 ---
 
 ## Current Priorities
 
-1. Verify mainnet activity
-2. Verify wallet sync and transfers
-3. Verify staking / equity pool flow
-4. Verify public explorer availability
-5. Verify accessible trading venues
-6. Replace outdated instructions with 2026-tested steps
+1. Keep status pages aligned with real manual testing
+2. Document broken Pullup behavior clearly
+3. Document Win11 local node failure clearly
+4. Verify native desktop staking flow
+5. Profile DEX liquidity depth and slippage
+6. Replace broken historical links with verified working alternatives
 
 ---
 
@@ -129,25 +135,26 @@ When reporting an update, include:
 
 - date tested
 - tool or wallet version
-- network used
+- operating system
 - exact result
 - screenshot or log if available
 - whether the result is confirmed or partial
 
 ### Example
 
-- Date: 2026-03-17
-- Component: Wallet Sync
+- Date: 2026-03-18
+- Component: Pullup Windows wallet
 - Version: [fill in]
-- Result: Sync successful / failed / partial
-- Notes: [fill in]
+- OS: Windows 11
+- Result: freezes during wallet creation and import
+- Notes: issue reproduced consistently
 
 ---
 
 ## Disclaimer
 
 Everything here is published by independent community maintainers.  
-Always verify on your own before using any wallet, staking flow, node endpoint, or exchange.
+Always verify on your own before using any wallet, staking flow, node endpoint, DApp, or exchange route.
 
 ---
 
