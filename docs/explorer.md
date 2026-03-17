@@ -1,5 +1,78 @@
 # Explorer Status
 
+**Status:** Working  
+**Last Updated:** 2026-03-18
+
+---
+
+## Summary
+
+The current SERO explorer is usable and matches current chain state in manual testing.
+
+The historical explorer URL is not usable.
+
+---
+
+## Explorer Links
+
+### Current Explorer
+- https://explorer.sero.cash/
+
+### Historical Explorer
+- https://explorer.web.sero.cash/blocks.html
+
+---
+
+## Confirmed Findings
+
+### Current Explorer
+Confirmed by manual testing:
+
+- explorer loads
+- explorer is usable
+- explorer height matches current chain state
+- current chain state is consistent with active mining observation
+
+### Historical Explorer
+- historical URL returns unusable result / 404
+- should not be treated as a live fallback
+
+---
+
+## Verification Table
+
+| Item | Result | Notes |
+|------|--------|-------|
+| Current explorer reachable | Working | |
+| Current explorer usable | Working | |
+| Current explorer height freshness | Working | matched manually |
+| Current explorer suitable for basic verification | Working | |
+| Historical explorer URL | Broken | 404 / unusable |
+
+---
+
+## Current Interpretation
+
+Explorer is one of the stronger surviving parts of the SERO ecosystem in 2026.
+
+However, historical explorer links should be considered outdated and should not be presented as live infrastructure.
+
+---
+
+## Remaining Optional Checks
+
+- search behavior under more cases
+- address lookup under newly generated wallets
+- transaction visibility immediately after fresh transfer
+
+---
+
+## Community Test Reports
+
+### 2026-03-18
+- current explorer: working
+- historical explorer: broken# Explorer Status
+
 **Status:** Mixed / Needs Retest  
 **Last Updated:** 2026-03-17
 
