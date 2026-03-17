@@ -1,5 +1,138 @@
 # Wallet Setup and Wallet Status
 
+**Status:** Mixed  
+**Last Updated:** 2026-03-18
+
+---
+
+## Summary
+
+As of current Windows 11 testing:
+
+- Full Node Wallet: working
+- Popup online wallet: working
+- Pullup Windows wallet: broken
+- Pullup web wallet: broken
+
+---
+
+## Official / Historical Wallet Links
+
+### Full Node Wallet
+- Repository: https://github.com/sero-cash/wallet
+- Releases: https://github.com/sero-cash/wallet/releases
+
+### Pullup Light Wallet
+- Repository: https://github.com/sero-cash/pullup
+- Releases: https://github.com/sero-cash/pullup/releases
+- Docs Repository: https://github.com/sero-cash/pullup-docs
+
+### Popup
+- Repository: https://github.com/sero-cash/popup
+- Online Wallet: https://popup-flame.vercel.app/#/
+
+### General SERO
+- Official Website: https://sero.cash/
+- Wiki Home: https://wiki.sero.cash/en/index.html?file=home-Home
+- Wiki Repository: https://github.com/sero-cash/wiki
+
+---
+
+## Confirmed Working
+
+### Full Node Wallet
+Tested successfully for:
+
+- new wallet creation
+- wallet import
+- receiving funds
+- sending funds
+- transaction history
+- reopen after disconnect
+- contract / DApp entry
+
+### Popup Online Wallet
+Confirmed usable for:
+
+- normal wallet access
+- DApp browser access
+- SEED DApp access
+- pool access
+- Coral DEX access
+- CoralSwap access
+
+---
+
+## Confirmed Broken
+
+### Pullup Windows Wallet
+Confirmed behavior:
+
+- opens
+- freezes during wallet/account creation
+- freezes during wallet import
+- issue reproduced consistently
+
+### Pullup Web Wallet
+URL:
+- https://pullup-ruby.vercel.app/
+
+Confirmed behavior:
+
+- page opens
+- freezes during wallet creation/import
+- not usable for normal onboarding
+- issue reproduced consistently
+
+---
+
+## Verification Table
+
+| Item | Result | Notes |
+|------|--------|-------|
+| Full node wallet download works | Working | |
+| Full node wallet install works | Working | |
+| Full node wallet starts normally | Working | |
+| New wallet creation | Working | |
+| Existing wallet import | Working | |
+| Receive funds | Working | |
+| Send funds | Working | |
+| Transaction history | Working | |
+| Reopen after disconnect | Working | |
+| Contract / DApp entry | Working | |
+| Popup online wallet usable | Working | |
+| Pullup Windows wallet creation/import | Broken | Freezes 100% |
+| Pullup web wallet creation/import | Broken | Freezes 100% |
+
+---
+
+## Notes
+
+At the current stage, **Pullup should be treated as unusable** for normal onboarding.
+
+The most practical wallet routes right now are:
+
+1. Full Node Wallet
+2. Popup online wallet
+
+---
+
+## Remaining Untested Wallet Items
+
+- native desktop staking page inside Full Node Wallet
+- deeper compatibility across more Windows versions
+- Popup behavior under larger transaction volume
+
+---
+
+## Community Test Reports
+
+### 2026-03-18
+- Full Node Wallet: working
+- Popup online wallet: working
+- Pullup Windows wallet: broken
+- Pullup web wallet: broken# Wallet Setup and Wallet Status
+
 **Status:** Checking  
 **Last Updated:** 2026-03-17
 
