@@ -1,0 +1,6 @@
+title: SERO 2026 Unofficial Status Page
+description: Community-maintained SERO ecosystem status, tools, and documentation.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
