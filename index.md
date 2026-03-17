@@ -1,4 +1,3 @@
-```md
 ---
 title: SERO 2026 Unofficial Status Page
 ---
@@ -25,44 +24,43 @@ Its goal is simple: to verify what still works, document what is broken, and mak
 | Mainnet | Checking | Need current block production verification |
 | Wallet | Checking | Need sync and transfer test |
 | Staking / Equity Pool | Checking | Need share purchase and reward verification |
-| Explorer | Checking | Need availability test |
+| Explorer | Mixed / Needs Retest | Public pages resolve, but consistency still needs manual comparison |
 | Public Nodes | Checking | Need reachable node list |
 | Exchange Access | Limited | Verify currently accessible markets |
 | Developer Activity | Low / Unknown | Need recent repository and network verification |
 
 ---
 
-## What This Site Does
+## Official / Historical Resources
 
-This site focuses on four things:
+### Core
+- Official Website: https://sero.cash/
+- GitHub Organization: https://github.com/sero-cash
+- Core Repository: https://github.com/sero-cash/go-sero
+- Core Releases: https://github.com/sero-cash/go-sero/releases
+- Official Wiki: https://wiki.sero.cash/en/index.html?file=home-Home
+- Wiki Repository: https://github.com/sero-cash/wiki
 
-1. Verifying whether SERO infrastructure is still usable
-2. Rebuilding up-to-date documentation for normal users
-3. Publishing real test results instead of recycled old claims
-4. Helping remaining users and developers coordinate in public
+### Wallets
+- Full Node Wallet Repository: https://github.com/sero-cash/wallet
+- Full Node Wallet Releases: https://github.com/sero-cash/wallet/releases
+- Light Wallet Repository (Pullup): https://github.com/sero-cash/pullup
+- Light Wallet Releases (Pullup): https://github.com/sero-cash/pullup/releases
+- Pullup Docs Repository: https://github.com/sero-cash/pullup-docs
+- Mobile Wallet Repository (Popup): https://github.com/sero-cash/popup
+
+### Explorer / Tools / Community
+- Current Explorer: https://explorer.sero.cash/
+- Historical Explorer: https://explorer.web.sero.cash/blocks.html
+- Historical Smart Contract Editor: https://remix.web.sero.cash/
+- Historical Official X / Twitter: https://twitter.com/SEROdotCASH
+- Historical Official Telegram: https://t.me/SeroOfficial
+- Historical Discord Invite: https://discordapp.com/invite/3AZVMRU
 
 ---
 
-## What Still Needs Verification
+## Community Documentation
 
-- Can a fresh wallet still sync successfully?
-- Are public nodes stable and reachable?
-- Is staking still working end to end?
-- Is the explorer still indexing recent activity?
-- Which exchanges, if any, still provide real liquidity?
-- Are old official guides still valid in 2026?
-
----
-
-## Quick Links
-
-### Official / Historical Resources
-- Official Website: [Add link]
-- GitHub Organization: [Add link]
-- Core Repository: [Add link]
-- Wallet Repository: [Add link]
-
-### Community Documentation
 - [Wallet Setup Guide](./docs/wallets.md)
 - [Staking Guide](./docs/staking.md)
 - [Node & RPC Guide](./docs/nodes.md)
@@ -82,24 +80,6 @@ See full update history in the [updates](./updates/2026-03-17.md) page.
 
 ---
 
-## Community Maintenance Rules
-
-This project will **not**:
-- pretend to be official
-- publish fake partnerships
-- make price promises
-- encourage coordinated pumping
-- hide failed tests
-
-This project **will**:
-- publish verifiable results
-- mark unknown items clearly
-- update broken links
-- keep public documentation simple
-- accept corrections from the community
-
----
-
 ## Contribute
 
 You can contribute by:
@@ -110,6 +90,10 @@ You can contribute by:
 - improving documentation
 - submitting pull requests or issues
 
+Repository Home: https://github.com/mingshenhk/sero-2026-status  
+GitHub Issues: https://github.com/mingshenhk/sero-2026-status/issues  
+Historical Official Telegram: https://t.me/SeroOfficial  
+Historical Official X / Twitter: https://twitter.com/SEROdotCASH
 
 ---
 
