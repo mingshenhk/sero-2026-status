@@ -1,78 +1,89 @@
 # Exchange Access Notes
 
-**Status:** Limited / Checking  
-**Last Updated:** 2026-03-17
+**Status:** Partial / Working  
+**Last Updated:** 2026-03-18
 
 ---
 
-## Purpose
+## Summary
 
-This page tracks whether SERO can still be bought, sold, or transferred through any real market with usable liquidity.
+DEX / swap functionality is confirmed working through the Popup online wallet DApp browser.
 
----
+Confirmed reachable and usable:
 
-## Important Warning
-
-For very small or low-liquidity assets, a listed market does **not** automatically mean:
-
-- safe trading
-- meaningful liquidity
-- easy withdrawals
-- fair price discovery
-
-Always verify:
-- order book depth
-- withdrawals
-- deposits
-- actual spread
-- recent trade activity
+- Coral DEX
+- CoralSwap
+- pool-related pages
 
 ---
 
-## Verification Checklist
+## Confirmed Working
+
+### Coral DEX
+Confirmed in manual testing:
+
+- interface loads
+- trading path usable
+- pair data visible
+
+### CoralSwap
+Confirmed in manual testing:
+
+- interface loads
+- swap path usable
+- token list visible
+- liquidity-related pages reachable
+
+### Pool-Related Pages
+Confirmed in manual testing:
+
+- pool pages load
+- pool data visible
+- practical access path available through Popup DApp browser
+
+---
+
+## Verification Table
 
 | Item | Result | Notes |
 |------|--------|-------|
-| At least one market exists | Unknown | |
-| Deposits enabled | Unknown | |
-| Withdrawals enabled | Unknown | |
-| Real order flow visible | Unknown | |
-| Spread not extreme | Unknown | |
-| Market still maintained | Unknown | |
+| Coral DEX interface load | Working | |
+| Coral DEX trading path | Working | |
+| CoralSwap interface load | Working | |
+| CoralSwap swap path | Working | |
+| Pool pages load | Working | |
+| Pool data visible | Working | |
+| Large-order liquidity depth | Untested | |
+| Slippage under bigger trades | Untested | |
+| CEX access | Untested | |
 
 ---
 
-## Market Tracking Table
+## Current Interpretation
 
-| Exchange | Pair | Deposit | Withdrawal | Liquidity | Last Checked | Notes |
-|----------|------|---------|------------|-----------|--------------|-------|
-| [Add exchange] | [Add pair] | Unknown | Unknown | Unknown | [Date] | |
-| [Add exchange] | [Add pair] | Unknown | Unknown | Unknown | [Date] | |
+SERO exchange functionality is operational at the DApp / DEX level.
+
+What is **not yet fully characterized** is:
+
+- how deep the liquidity really is
+- how bad slippage becomes on larger trades
+- whether any centralized exchange routes remain practically usable
 
 ---
 
-## What To Record
+## Remaining High-Priority Exchange Tests
 
-When checking a market, record:
-
-- exchange name
-- trading pair
-- last visible trade time
-- approximate spread
-- whether deposits are open
-- whether withdrawals are open
-- whether KYC is required
-- whether the market looks abandoned
+- larger swap test
+- slippage profiling
+- liquidity depth profiling
+- add/remove liquidity test
+- reward / fee claim behavior if applicable
 
 ---
 
 ## Community Test Reports
 
-_No reports yet._
-
----
-
-## Notes
-
-This page is purely operational.  
-It is not a recommendation to trade or speculate on SERO.
+### 2026-03-18
+- Coral DEX: working
+- CoralSwap: working
+- DEX / swap practical path: working
