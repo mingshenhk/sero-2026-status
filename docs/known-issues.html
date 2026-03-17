@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Known Issues - SERO 2026</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">SERO <span>2026</span> Unofficial Status</div>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="./wallets.html">Wallets</a>
+        <a href="./nodes.html">Nodes</a>
+        <a href="./explorer.html">Explorer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <div class="page-card">
+          <div class="eyebrow">Documentation • Known Issues</div>
+          <h1>Known Issues</h1>
+          <div class="page-meta">
+            <span class="pill partial">Tracked</span>
+            <span class="pill unknown">Last Updated: 2026-03-18</span>
+          </div>
+          <p>
+            This page collects confirmed or recurring issues affecting the SERO ecosystem in 2026.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="table-card">
+          <h2>Current issues</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Issue</th>
+                  <th>Status</th>
+                  <th>Impact</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pullup Windows wallet freezes during creation/import</td>
+                  <td><span class="pill broken">Confirmed</span></td>
+                  <td>New users cannot reliably onboard through Pullup on tested Windows setup.</td>
+                  <td>Freezes 100% during wallet/account creation and wallet import.</td>
+                </tr>
+                <tr>
+                  <td>Pullup web wallet freezes during creation/import</td>
+                  <td><span class="pill broken">Confirmed</span></td>
+                  <td>Web Pullup route is not usable for normal onboarding.</td>
+                  <td>Page opens, but creation/import freezes consistently.</td>
+                </tr>
+                <tr>
+                  <td>Local Win11 node execution is broken</td>
+                  <td><span class="pill broken">Confirmed</span></td>
+                  <td>Self-hosted local node path is blocked in tested Windows 11 environment.</td>
+                  <td>go-sero / gero binaries fail to run successfully; DLL issue observed.</td>
+                </tr>
+                <tr>
+                  <td>Official wiki home is broken</td>
+                  <td><span class="pill broken">Confirmed</span></td>
+                  <td>Users may assume official docs are intact when the historical entry point is broken.</td>
+                  <td>Wiki repository still exists, but home page entry is not usable.</td>
+                </tr>
+                <tr>
+                  <td>Historical explorer URL is broken</td>
+                  <td><span class="pill broken">Confirmed</span></td>
+                  <td>Historical fallback explorer should not be presented as current infrastructure.</td>
+                  <td>Returns unusable result / 404.</td>
+                </tr>
+                <tr>
+                  <td>Native desktop staking remains untested</td>
+                  <td><span class="pill partial">Partial</span></td>
+                  <td>Users should not assume desktop staking flow matches Popup path.</td>
+                  <td>Popup staking path works; native desktop staking is still not verified.</td>
+                </tr>
+                <tr>
+                  <td>Liquidity depth is not yet fully profiled</td>
+                  <td><span class="pill partial">Partial</span></td>
+                  <td>Working DEX path does not guarantee healthy execution on larger trades.</td>
+                  <td>DEX / swap works, but deeper liquidity analysis remains pending.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h3>Positive counterpoints</h3>
+          <ul class="clean">
+            <li>Mainnet is working</li>
+            <li>Explorer is working</li>
+            <li>Full Node Wallet is working</li>
+            <li>Popup online wallet is working</li>
+            <li>SEED / pool / Coral DEX / CoralSwap are working</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Reporting rule</h3>
+          <div class="callout">
+            When adding a new issue, include:
+            <ul class="clean">
+              <li>date observed</li>
+              <li>affected component</li>
+              <li>exact behavior</li>
+              <li>reproduction steps</li>
+              <li>logs or screenshots if available</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        A status page becomes useless the moment it hides known failures.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
