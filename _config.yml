@@ -3,4 +3,9 @@ description: Community-maintained SERO ecosystem status, tools, and documentatio
 theme: minima
 markdown: kramdown
 plugins:
+  - jekyll-feedtitle: SERO 2026 Unofficial Status Page
+description: Community-maintained SERO ecosystem status, tools, and documentation.
+theme: minima
+markdown: kramdown
+plugins:
   - jekyll-feed
